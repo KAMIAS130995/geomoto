@@ -4,7 +4,7 @@
 // La clave de acceso se obtiene en web3forms.com con el correo de destino. Es pública por diseño:
 // solo permite enviar mensajes a ese correo.
 const EMAIL = 'geomoto.pe@gmail.com';
-const WEB3FORMS_KEY = 'PEGAR-AQUI-LA-CLAVE-DE-WEB3FORMS';
+const WEB3FORMS_KEY = 'a7dccce7-6cdd-4acd-9179-05984e09c954';
 const ENDPOINT = 'https://api.web3forms.com/submit';
 const HAS_KEY = !WEB3FORMS_KEY.startsWith('PEGAR');
 
