@@ -6,8 +6,16 @@
 const EMAIL = 'geomoto.pe@gmail.com';
 const WEB3FORMS_KEY = 'PEGAR-AQUI-LA-CLAVE-DE-WEB3FORMS';
 const ENDPOINT = 'https://api.web3forms.com/submit';
+const HAS_KEY = !WEB3FORMS_KEY.startsWith('PEGAR');
 
+// Devuelve 'web' si el mensaje se envió directo, o 'mailto' si se abrió el correo del visitante
 async function sendLead(subject, fields, botcheck = '') {
+  // Mientras no haya clave de Web3Forms, se abre el programa de correo con el mensaje ya escrito
+  if (!HAS_KEY) {
+    const body = Object.entries(fields).map(([k, v]) => `${k}: ${v}`).join('\n');
+    location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return 'mailto';
+  }
   // Si el cliente dejó su correo, "Responder" en Gmail le escribe directamente
   const replyTo = fields.Correo && fields.Correo.includes('@') ? { replyto: fields.Correo } : {};
   const res = await fetch(ENDPOINT, {
@@ -17,6 +25,7 @@ async function sendLead(subject, fields, botcheck = '') {
   });
   const json = await res.json().catch(() => ({}));
   if (!res.ok || json.success !== true) throw new Error(json.message || 'Error al enviar');
+  return 'web';
 }
 
 // Menú móvil
@@ -261,7 +270,7 @@ form.addEventListener('submit', async (e) => {
   formStatus.textContent = '';
 
   try {
-    await sendLead(`Web GeoMoto: ${MOTIVOS[motivo]} (${data.nombre.trim()})`, {
+    const via = await sendLead(`Web GeoMoto: ${MOTIVOS[motivo]} (${data.nombre.trim()})`, {
       Origen: 'Formulario de contacto',
       Motivo: MOTIVOS[motivo],
       Nombre: data.nombre.trim(),
@@ -275,6 +284,8 @@ form.addEventListener('submit', async (e) => {
     });
     formDone.querySelector('[data-done-nombre]').textContent = data.nombre.trim().split(' ')[0];
     formDone.querySelector('[data-done-tel]').textContent = celular;
+    formDone.querySelector('[data-done-title]').textContent = via === 'mailto' ? '¡Ya casi está!' : '¡Solicitud enviada!';
+    formDone.querySelector('[data-done-mail]').hidden = via !== 'mailto';
     form.hidden = true;
     formDone.hidden = false;
     formDone.focus();
@@ -473,13 +484,21 @@ async function showSummary() {
 async function submitChat() {
   setOptions([]);
   addMsg('Enviar', 'user');
-  await botSay('Enviando tus datos…');
+  await botSay(HAS_KEY ? 'Enviando tus datos…' : 'Abriendo tu correo con la solicitud lista…');
   try {
-    await sendLead(`Web GeoMoto: ${MOTIVOS[state.motivo]} (${state.data.Nombre})`, {
+    const via = await sendLead(`Web GeoMoto: ${MOTIVOS[state.motivo]} (${state.data.Nombre})`, {
       Origen: 'Chat del sitio web',
       Motivo: MOTIVOS[state.motivo],
       ...state.data,
     });
+    if (via === 'mailto') {
+      await botSay(`Se abrió tu correo con la solicitud para ${EMAIL}: solo presiona «Enviar». Un asesor de GeoMoto te contactará pronto.`);
+      setOptions([
+        { label: 'Abrir el correo otra vez', onClick: submitChat },
+        { label: 'Nueva consulta', onClick: () => startChat() },
+      ]);
+      return;
+    }
     await botSay('¡Listo! Recibimos tus datos. Un asesor de GeoMoto te contactará pronto.');
     setOptions([{ label: 'Nueva consulta', onClick: () => startChat() }]);
   } catch {
