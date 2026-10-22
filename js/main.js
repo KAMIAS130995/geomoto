@@ -309,10 +309,10 @@ formDone.querySelector('[data-done-again]').addEventListener('click', () => {
 });
 
 // El botón flotante del chat se aparta mientras el formulario está en pantalla
-const contactSection = document.getElementById('contacto');
+// (se observa la tarjeta del formulario: en celular la sección completa es más alta que la pantalla)
 new IntersectionObserver(([entry]) => {
   document.querySelector('.assist').classList.toggle('is-quiet', entry.isIntersecting);
-}, { threshold: 0.25 }).observe(contactSection);
+}, { threshold: 0 }).observe(formCard);
 
 // Asistente de chat: hace preguntas, recoge los datos y los envía al correo
 const assist = document.querySelector('.assist');
