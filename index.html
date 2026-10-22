@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoMoto · Garantía Extendida para motos y motokares Honda</title>
+  <meta name="description" content="GeoMoto: Protección Extendida para motos y motokares Honda. Hasta 12 meses o 10 000 km adicionales, repuestos originales y servicio técnico en todo el Perú.">
+  <link rel="icon" href="assets/img/isotipo-color.png">
+  <link rel="preload" href="assets/fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Poppins-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <nav class="topbar__tabs" aria-label="Tipo de cliente">
+        <a href="#inicio" class="is-active">Personas</a>
+        <a href="#empresas">Empresas</a>
+      </nav>
+      <span class="topbar__link">Disponible en Sorsa Motors</span>
+    </div>
+  </div>
+
+  <!-- Encabezado fijo -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="header__logo" aria-label="GeoMoto, inicio">
+        <img src="assets/img/logo-color.png" alt="GeoMoto" width="170" height="57">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a class="nav__link" href="#nosotros">Nosotros</a>
+        <div class="nav__item has-menu">
+          <button class="nav__link" aria-expanded="false">Garantía extendida <i class="chev"></i></button>
+          <div class="dropdown">
+            <a href="#planes">Planes para motos y motokares</a>
+            <a href="#cobertura">¿Qué cubre?</a>
+            <a href="#exclusiones">¿Qué no cubre?</a>
+            <a href="#como-usar">¿Cómo usar mi garantía?</a>
+            <a href="#servicios">Servicios para tu moto</a>
+          </div>
+        </div>
+        <a class="nav__link" href="#empresas">Empresas</a>
+        <a class="nav__link" href="#ayuda">Centro de ayuda</a>
+        <a class="nav__mail" href="mailto:geomoto.pe@gmail.com" aria-label="Escríbenos a geomoto.pe@gmail.com">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        </a>
+        <a href="#contacto" class="btn btn--primary">Activa tu garantía</a>
+      </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- Carrusel principal -->
+    <section class="hero" aria-roledescription="carrusel" aria-label="Destacados">
+      <div class="hero__track">
+
+        <article class="slide slide--hero is-active">
+          <picture class="slide__photo">
+            <source srcset="assets/img/fotos/moto-protegida.webp" type="image/webp">
+            <img src="assets/img/fotos/moto-protegida.jpg" alt="Moto Honda CB190R protegida dentro de una cúpula de luz" width="1308" height="1202" fetchpriority="high">
+          </picture>
+          <div class="container slide__inner">
+            <div class="slide__text">
+              <span class="chip chip--accent">Garantía Extendida Honda</span>
+              <h1>Asegura tu inversión Honda</h1>
+              <p>Tu Honda te acompaña todos los días. Nosotros nos encargamos de que siga haciéndolo por más tiempo: hasta 12 meses o 10 000 km adicionales.</p>
+              <a href="#planes" class="btn btn--accent">Conocer más</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--blue">
+          <div class="container slide__inner">
+            <div class="slide__text">
+              <span class="chip chip--accent">Motokares</span>
+              <h2 class="slide__title">Tu motokar es tu trabajo. Cuidémoslo juntos.</h2>
+              <p>Motor, transmisión, caja de cambios y más, con repuestos originales y mano de obra especializada.</p>
+              <a href="#planes" class="btn btn--accent" data-filter-link="motokares">Ver garantía</a>
+            </div>
+            <div class="slide__art">
+              <div class="seal seal--small" aria-hidden="true"><b>12</b><span>meses</span></div>
+              <img src="assets/img/fotos/motokar.png" alt="Motokar Honda" class="slide__img" width="308" height="216">
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--photo" style="background-image: url('assets/img/fotos/carretera.jpg')">
+          <div class="container slide__inner">
+            <div class="slide__text">
+              <span class="chip chip--accent">Cobertura nacional</span>
+              <h2 class="slide__title">Tranquilidad y respaldo en cada ruta</h2>
+              <p>Servicio técnico y talleres autorizados en todo el Perú, estés donde estés.</p>
+              <a href="#ayuda" class="btn btn--accent">Centro de ayuda</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--mist">
+          <div class="container slide__inner">
+            <div class="slide__text">
+              <span class="chip chip--signal">Deducible S/ 40 + IGV</span>
+              <h2 class="slide__title">¿Tu garantía de fábrica ya vence? Pregunta hoy.</h2>
+              <p>Evita gastos imprevistos por fallas mecánicas y amplía la vida útil de tu moto o motokar Honda.</p>
+              <a href="#contacto" class="btn btn--primary">Solicítalo aquí</a>
+            </div>
+            <div class="slide__art">
+              <img src="assets/img/fotos/moto-azul.png" alt="Moto Honda CB azul" class="slide__img" width="424" height="392">
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="hero__controls">
+        <button class="hero__arrow" data-dir="-1" aria-label="Anterior"><i class="chev chev--left"></i></button>
+        <div class="hero__dots"></div>
+        <button class="hero__pause" aria-label="Pausar carrusel"><span></span><span></span></button>
+        <button class="hero__arrow" data-dir="1" aria-label="Siguiente"><i class="chev chev--right"></i></button>
+      </div>
+    </section>
+
+    <!-- Bienvenida -->
+    <section class="section welcome">
+      <div class="container welcome__inner">
+        <div>
+          <span class="eyebrow">Bienvenidos a GeoMoto</span>
+          <h2>Servicio de Garantía Extendida para motos y motokares Honda</h2>
+        </div>
+        <div>
+          <p>La Garantía Extendida cubre la <strong>rotura mecánica</strong> de tu moto o motokar Honda una vez que termina la garantía de fábrica: el desperfecto repentino e imprevisto de una pieza cubierta que impide su funcionamiento normal.</p>
+          <p>Incluye la reparación o el reemplazo de las piezas cubiertas y la mano de obra necesaria, con repuestos originales y técnicos especializados.</p>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="perks">
+          <li class="perk perk--featured">
+            <span class="perk__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.34 19a10 10 0 1 1 17.32 0"/><path class="perk__accent" d="M12 14l4-4"/><circle class="perk__node" cx="12" cy="14" r="1.8"/></svg></span>
+            <span class="perk__eyebrow">Cobertura adicional</span>
+            <strong class="perk__big">12 meses</strong>
+            <p>o <b>10 000 km</b> adicionales, lo que ocurra primero.</p>
+          </li>
+          <li class="perk">
+            <span class="perk__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2.5a4.5 4.5 0 0 0-4.5 4.5c0 3.3 4.5 8 4.5 8s4.5-4.7 4.5-8A4.5 4.5 0 0 0 15 2.5z"/><circle cx="15" cy="7" r="1.5"/><path class="perk__accent perk__dash" d="M15 15.5c0 3-5.5 1.5-7.5 3.8"/><circle class="perk__node" cx="6" cy="20" r="2"/></svg></span>
+            <h3>Servicio técnico nacional</h3>
+            <p>Talleres autorizados en todo el Perú, estés donde estés.</p>
+          </li>
+          <li class="perk">
+            <span class="perk__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/><circle class="perk__node" cx="5.6" cy="18.4" r="1.4"/></svg></span>
+            <h3>Mano de obra especializada</h3>
+            <p>Técnicos capacitados en motos y motokares Honda.</p>
+          </li>
+          <li class="perk">
+            <span class="perk__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="M7.5 4.27l9 5.15M3.29 7L12 12l8.71-5M12 22V12"/><path class="perk__accent" d="M16 17l2 2 4-4"/></svg></span>
+            <h3>Repuestos originales</h3>
+            <p>Cada reparación cubierta se hace con piezas originales.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Planes con pestañas -->
+    <section class="section section--tint" id="planes">
+      <div class="container">
+        <h2 class="section__title">Protegemos cada ruta</h2>
+
+        <div class="tabs" role="tablist" aria-label="Categorías">
+          <button class="tab is-active" role="tab" aria-selected="true" data-filter="destacado">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>Destacado
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="motos">
+            <svg viewBox="0 0 24 24"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5L10 9h5l3.5 7.5M12 9l-1.5-3H8M15 9l2-3h2"/></svg>Motos
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="motokares">
+            <svg viewBox="0 0 24 24"><path d="M3 15V8a3 3 0 0 1 3-3h7l4 5h3v5"/><circle cx="7" cy="17" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg>Motokares
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="beneficios">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>Beneficios
+          </button>
+        </div>
+
+        <div class="cards-wrap">
+          <button class="cards-arrow" data-dir="-1" aria-label="Anteriores"><i class="chev chev--left"></i></button>
+          <div class="cards" id="cards">
+
+            <article class="card" data-cat="destacado motos">
+              <div class="card__media card__media--dark"><img src="assets/img/fotos/moto-azul.png" alt="" width="424" height="392"></div>
+              <div class="card__body">
+                <span class="chip chip--accent chip--sm">Más pedido</span>
+                <h3>Garantía Extendida Moto</h3>
+                <p>Hasta 12 meses o 10 000 km adicionales a la garantía de fábrica de tu moto Honda.</p>
+                <p class="card__price">Deducible <b>S/ 40 + IGV</b> por evento</p>
+                <a href="#contacto" class="card__link">Solicítalo aquí <i class="chev chev--right"></i></a>
+              </div>
+            </article>
+
+            <article class="card" data-cat="destacado motokares">
+              <div class="card__media card__media--blue"><img src="assets/img/fotos/motokar.png" alt="" width="308" height="216"></div>
+              <div class="card__body">
+                <span class="chip chip--accent chip--sm">Para trabajar</span>
+                <h3>Garantía Extendida Motokar</h3>
+                <p>Tu herramienta de trabajo protegida ante roturas mecánicas, con técnicos capacitados.</p>
+                <p class="card__price">Deducible <b>S/ 40 + IGV</b> por evento</p>
+                <a href="#contacto" class="card__link">Solicítalo aquí <i class="chev chev--right"></i></a>
+              </div>
+            </article>
+
+            <article class="card" data-cat="destacado motos">
+              <div class="card__media card__media--mist"><img src="assets/img/fotos/moto-negra.png" alt="" width="339" height="304"></div>
+              <div class="card__body">
+                <span class="chip chip--sm">12 sistemas</span>
+                <h3>Cobertura completa</h3>
+                <p>Motor, transmisión, dirección, frenos, sistema eléctrico, suspensión y más.</p>
+                <a href="#cobertura" class="card__link">Ver qué cubre <i class="chev chev--right"></i></a>
+              </div>
+            </article>
+
+            <article class="card" data-cat="destacado beneficios motos motokares">
+              <div class="card__media card__media--icon"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+              <div class="card__body">
+                <h3>Sin gastos imprevistos</h3>
+                <p>Protege tu inversión y conduce con mayor tranquilidad ante fallas mecánicas.</p>
+                <a href="#como-usar" class="card__link">Cómo funciona <i class="chev chev--right"></i></a>
+              </div>
+            </article>
+
+            <article class="card" data-cat="beneficios motos motokares">
+              <div class="card__media card__media--icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3"/><path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div>
+              <div class="card__body">
+                <h3>Es transferible</h3>
+                <p>Si vendes tu Honda, la garantía puede pasar al nuevo dueño y aumenta su valor de reventa.</p>
+                <a href="#preguntas" class="card__link">Ver condiciones <i class="chev chev--right"></i></a>
+              </div>
+            </article>
+
+            <article class="card" data-cat="beneficios motos motokares">
+              <div class="card__media card__media--icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+              <div class="card__body">
+                <h3>Más vida útil</h3>
+                <p>Atención en talleres autorizados para el correcto funcionamiento y cuidado de tu Honda.</p>
+                <a href="#ayuda" class="card__link">Centro de ayuda <i class="chev chev--right"></i></a>
+              </div>
+            </article>
+
+          </div>
+          <button class="cards-arrow" data-dir="1" aria-label="Siguientes"><i class="chev chev--right"></i></button>
+        </div>
+        <p class="legal center">Aplican términos y condiciones.</p>
+      </div>
+    </section>
+
+    <!-- Qué cubre -->
+    <section class="section" id="cobertura">
+      <div class="container">
+        <h2 class="section__title">¿Qué cubre la Garantía Extendida?</h2>
+        <p class="section__lead center">Cubre la reparación o el reemplazo de las piezas de estos sistemas cuando dejan de funcionar por una rotura mecánica. Toca cada uno para ver el detalle.</p>
+        <div class="systems">
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="7" width="13" height="10" rx="2"/><path d="M17 10h3v4h-3M7 7V4h6v3"/></svg>Motor</summary>
+            <p>Partes internas lubricadas: válvulas de admisión y escape, árbol de levas, cigüeñal y sus cojinetes, pistones y aros, bielas, engranajes y cadena de distribución, bomba de aceite, bomba de agua y montantes de motor. La tapa de cilindros y el block, cuando fallan por una pieza cubierta.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>Transmisión</summary>
+            <p>Partes internas lubricadas: cojinetes, levas, engranajes, cadenas, ejes, mecanismo selector, arandelas, resortes y bujes. El embrague está excluido.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>Sistema de lubricación</summary>
+            <p>Sistema completo de inyección de aceite, bomba de aceite y su engranaje, tanque de aceite, sensor de nivel de aceite y cañería metálica.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 8v8M15 8v8M9 12h6"/></svg>Caja primaria</summary>
+            <p>Todas las partes internas lubricadas. La carcasa, cuando falla por una pieza cubierta.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Diferencial</summary>
+            <p>Solo para modelos cardánicos. Partes internas lubricadas; eje y carcasa, cuando fallan por una pieza cubierta.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><path d="M8 3v8l-2 10M16 3v8l2 10M8 7h8M9 13l6 2M9 16l6 2"/></svg>Suspensión</summary>
+            <p>Barrales delanteros y sus partes internas lubricadas, cojinetes de ruedas delantera y trasera, cojinetes o bujes de la horquilla trasera y brazos de oscilación.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v6M5 15l5-2M19 15l-5-2"/></svg>Dirección</summary>
+            <p>Conjunto de vástago de dirección, con cojinetes, bujes, eje y tuercas de ajuste.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M15 4.6a8 8 0 0 1 4.4 4.4"/></svg>Frenos</summary>
+            <p>Cálipers, bomba de freno, plato fijo de tambor, cubos y mecanismos internos. Pastillas, zapatas y discos están excluidos.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg>Sistema eléctrico</summary>
+            <p>Arranque, bobina, rectificadores, estator, magneto, solenoides, alternador, regulador de voltaje, cableado, módulo de ignición e inyección electrónica con sus sensores.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/></svg>Instrumental</summary>
+            <p>Velocímetro, tacómetro, indicador de cambios y nivel de combustible.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><rect x="5" y="3" width="10" height="18" rx="2"/><path d="M15 8h2a2 2 0 0 1 2 2v6a1 1 0 0 0 2 0V8l-3-3"/></svg>Combustible y refrigeración</summary>
+            <p>Tanque de combustible y flotante, radiador e inyectores. Cubre la reparación o el reemplazo, no los ajustes.</p></details>
+          <details class="system"><summary><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="5"/></svg>Juntas y retenes</summary>
+            <p>Juntas de tapa de cilindros, múltiple de admisión, tapa de válvulas, caja primaria, diferencial y caja; retenes de cigüeñal y de bomba de agua.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qué no cubre -->
+    <section class="section section--tint" id="exclusiones">
+      <div class="container excl">
+        <div>
+          <h2 class="section__title section__title--left">¿Qué no cubre?</h2>
+          <p class="section__lead">La Garantía Extendida cubre roturas mecánicas. No es un seguro. Estas son las exclusiones principales:</p>
+          <p class="legal">Revisa la lista completa en el Artículo 11 de tu certificado.</p>
+        </div>
+        <ul class="excl__list">
+          <li>Choques, robo, vandalismo, incendio, inundación y otros daños externos.</li>
+          <li>Piezas de desgaste y mantenimiento: pastillas, zapatas y discos de freno, embrague, llantas, cadena y catalina, batería, filtros, aceite, bujías, focos y fusibles.</li>
+          <li>Amortiguadores, carenados, partes plásticas, pintura, tapicería y escape.</li>
+          <li>Equipos no originales o instalados después: GPS, alarmas, audio.</li>
+          <li>Fallas por mal uso, sobrecarga, competencias, modificaciones o falta de mantenimiento.</li>
+          <li>Reparaciones hechas sin autorización previa de GeoMoto.</li>
+          <li>Traslado del vehículo al taller, hospedaje, alimentos o lucro cesante.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Cómo usar la garantía -->
+    <section class="section" id="como-usar">
+      <div class="container">
+        <h2 class="section__title">¿Cómo usar mi garantía?</h2>
+        <ol class="steps">
+          <li class="step"><span class="step__num">1</span><h3>Avísanos en 3 días</h3><p>Reporta la falla por teléfono o por escrito dentro de los 3 días calendario de detectarla.</p></li>
+          <li class="step"><span class="step__num">2</span><h3>Envía tus documentos</h3><p>Boleta de compra, fotos del odómetro, DNI y evidencia de tus mantenimientos en la marca.</p></li>
+          <li class="step"><span class="step__num">3</span><h3>Diagnóstico en taller</h3><p>El taller asignado revisa tu Honda y GeoMoto confirma si la reparación está cubierta.</p></li>
+          <li class="step"><span class="step__num">4</span><h3>Reparamos tu Honda</h3><p>En un máximo de 30 días útiles desde la aprobación (60 si hay que importar repuestos). Pagas solo el deducible.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Servicios para tu moto (secundarios a la garantía) -->
+    <section class="section section--tint" id="servicios">
+      <div class="container">
+        <span class="eyebrow center-block">Más servicios GeoMoto</span>
+        <h2 class="section__title">Servicios para tu moto</h2>
+        <p class="section__lead center">Además de tu garantía extendida, te ayudamos a cuidar tu Honda todos los días.</p>
+        <div class="services">
+          <article class="service">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg></span>
+            <div>
+              <h3>Rastreo GPS</h3>
+              <p>Ubica y monitorea tu moto o motokar en tiempo real. Pregunta a un asesor cómo instalarlo sin afectar tu garantía.</p>
+              <a href="#contacto" class="card__link" data-chat="servicios" data-servicio="Rastreo GPS">Consultar <i class="chev chev--right"></i></a>
+            </div>
+          </article>
+          <article class="service">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span>
+            <div>
+              <h3>Accesorios y repuestos</h3>
+              <p>Repuestos y accesorios para tu moto o motokar, para el trabajo y el día a día.</p>
+              <a href="#contacto" class="card__link" data-chat="servicios" data-servicio="Accesorios y repuestos">Consultar <i class="chev chev--right"></i></a>
+            </div>
+          </article>
+          <article class="service">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span>
+            <div>
+              <h3>Mantenimiento</h3>
+              <p>Servicio preventivo y correctivo para que tu Honda siga funcionando como el primer día.</p>
+              <a href="#contacto" class="card__link" data-chat="servicios" data-servicio="Mantenimiento">Consultar <i class="chev chev--right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Franja de ayuda -->
+    <section class="help-strip">
+      <div class="container help-strip__inner">
+        <img src="assets/img/isotipo-blanco.png" alt="" width="56" height="68" class="help-strip__icon">
+        <div class="help-strip__text">
+          <h2>¿Dudas con tu garantía?</h2>
+          <p>Déjanos tus datos en el chat y te escribimos o llamamos.</p>
+        </div>
+        <div class="help-strip__actions">
+          <a href="mailto:geomoto.pe@gmail.com" class="btn btn--outline-light">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            geomoto.pe@gmail.com
+          </a>
+          <button type="button" class="btn btn--accent" data-chat="cotizar">Escríbenos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="section" id="nosotros">
+      <div class="container about">
+        <div class="about__media">
+          <img src="assets/img/fotos/showroom.jpg" alt="Showroom Honda de Sorsa Motors" width="612" height="612">
+          <div class="about__badge">
+            <span>Con el respaldo de</span>
+            <img src="assets/img/fotos/sorsa-logo.png" alt="Sorsa Motors" width="381" height="223">
+          </div>
+        </div>
+        <div class="about__text">
+          <span class="eyebrow">Nosotros</span>
+          <h2>Un amigo que sabe de motos, no un banco</h2>
+          <p><strong>GeoMoto S.A.C.</strong> es una empresa peruana que presta servicios de programas de garantía extendida. Diseñamos la Protección Extendida para motos y motokares Honda que se ofrece en Sorsa Motors, concesionario Honda.</p>
+          <p>Trabajamos para mototaxistas, repartidores, comerciantes, agricultores, estudiantes y familias que dependen de su Honda para trabajar y moverse. Nuestra promesa es simple: si tu Honda tiene una falla mecánica cubierta, no pagas la reparación de tu bolsillo.</p>
+          <div class="stats">
+            <div><b>12</b><span>meses adicionales</span></div>
+            <div><b>10 000</b><span>km adicionales</span></div>
+            <div><b>12</b><span>sistemas cubiertos</span></div>
+            <div><b>Todo</b><span>el Perú</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Empresas -->
+    <section class="section section--dark" id="empresas">
+      <div class="container">
+        <span class="eyebrow eyebrow--light center-block">Para empresas y concesionarios</span>
+        <h2 class="section__title section__title--light">Soluciones para empresas</h2>
+        <p class="section__lead section__lead--light center">Ayudamos a que tu negocio venda más, fidelice a sus clientes y gestione mejor sus riesgos.</p>
+
+        <article class="biz-featured">
+          <div class="biz-featured__text">
+            <span class="chip chip--accent">Nuestra especialidad</span>
+            <h3>Programas de garantía extendida</h3>
+            <p>Diseñamos y operamos el programa de garantía extendida de tu concesionario o tienda: certificados, atención de fallas, red de talleres y seguimiento.</p>
+            <a href="#contacto" class="btn btn--accent" data-chat="concesionario">Quiero un programa</a>
+          </div>
+          <ul class="biz-featured__list">
+            <li><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><strong>Mayor confianza del cliente</strong>Respaldas lo que vendes y mejoras la experiencia de compra.</div></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg><div><strong>Clientes que vuelven</strong>El cliente regresa a tu taller para sus mantenimientos.</div></li>
+            <li><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><div><strong>Más ingresos en postventa</strong>Un producto adicional en cada venta.</div></li>
+          </ul>
+        </article>
+
+        <div class="partners">
+          <article>
+            <span class="partners__icon"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.2L12 16.6 6.5 19.5l1-6.2L3 8.9 9 8z"/></svg></span>
+            <h3>Fidelización y lealtad</h3>
+            <p>Programas para que tus clientes vuelvan a comprar y te recomienden.</p>
+          </article>
+          <article>
+            <span class="partners__icon"><svg viewBox="0 0 24 24"><path d="M3 11l15-6v14L3 13z"/><path d="M7 13v5a2 2 0 0 0 4 0v-4"/></svg></span>
+            <h3>Consultoría de marketing</h3>
+            <p>Estrategias y campañas para atraer y retener clientes.</p>
+          </article>
+          <article>
+            <span class="partners__icon"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9L2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
+            <h3>Asesoría en riesgos</h3>
+            <p>Identificamos los riesgos de tu negocio y te ayudamos a gestionarlos.</p>
+          </article>
+          <article>
+            <span class="partners__icon"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>
+            <h3>Capacitaciones</h3>
+            <p>Cursos de tecnología eléctrica y electrónica para tu equipo técnico.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Centro de ayuda -->
+    <section class="section" id="ayuda">
+      <div class="container help">
+        <div class="help__media">
+          <img src="assets/img/fotos/carretera.jpg" alt="Carretera en la selva peruana" width="717" height="1076">
+          <img src="assets/img/logo-blanco.png" alt="" class="help__logo" width="240" height="80">
+        </div>
+        <div class="help__content">
+          <h2 class="section__title section__title--left">¡Nosotros te ayudamos!</h2>
+          <p class="section__lead">Cómo usar tu garantía, coberturas, talleres y más.</p>
+          <ul class="actions">
+            <li>
+              <a href="#contacto" data-chat="falla">
+                <span class="actions__icon"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9L2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
+                <span><small>Reportar una falla</small>Avísanos en máximo 3 días</span>
+                <i class="chev chev--right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#cobertura">
+                <span class="actions__icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+                <span><small>Coberturas</small>Ver qué cubre mi garantía</span>
+                <i class="chev chev--right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#como-usar">
+                <span class="actions__icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+                <span><small>Procedimiento</small>Cómo usar mi garantía</span>
+                <i class="chev chev--right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#contacto" data-chat="transferencia">
+                <span class="actions__icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3"/><path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></span>
+                <span><small>Transferencia</small>Vendí mi Honda</span>
+                <i class="chev chev--right"></i>
+              </a>
+            </li>
+          </ul>
+          <a href="#preguntas" class="btn btn--primary">Más consultas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section class="section section--tint" id="preguntas">
+      <div class="container narrow">
+        <h2 class="section__title">Preguntas frecuentes</h2>
+        <div class="faq">
+          <details><summary>¿Es lo mismo que un seguro?</summary><p>No. La Garantía Extendida cubre roturas mecánicas de las piezas cubiertas. No cubre choques, robo, accidentes ni daños externos.</p></details>
+          <details><summary>¿Cuándo empieza mi cobertura?</summary><p>Al día siguiente de que vence la garantía de fábrica, y dura hasta 12 meses o 10 000 km adicionales, lo que ocurra primero. El precio del servicio se paga completo para activar la cobertura.</p></details>
+          <details><summary>¿Qué vehículos pueden acceder?</summary><p>Motos y motokares Honda nuevos, adquiridos en Sorsa Motors, que cumplan las condiciones de antigüedad y kilometraje del certificado.</p></details>
+          <details><summary>¿Cuánto pago cuando uso la garantía?</summary><p>Un deducible de S/ 40 + IGV por cada evento. La reparación cubierta va por cuenta de GeoMoto.</p></details>
+          <details><summary>¿Qué debo hacer para no perder la cobertura?</summary><p>Cumplir los mantenimientos del manual en la marca, cuidar el nivel de aceite y la temperatura del motor, y reportar cualquier falla dentro de los 3 días calendario.</p></details>
+          <details><summary>¿Puedo transferir la garantía si vendo mi Honda?</summary><p>Sí. Avísanos dentro de los 7 días calendario de la venta. El nuevo dueño paga el cargo de transferencia y presenta la boleta de compra y una copia del certificado. La garantía no se puede pasar a otro vehículo.</p></details>
+          <details><summary>¿Dónde reparan mi moto?</summary><p>En el centro de servicio que asigna GeoMoto, con técnicos capacitados y repuestos originales, en todo el Perú.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="cta" id="contacto">
+      <div class="container cta__inner">
+        <div class="cta__text">
+          <span class="eyebrow eyebrow--light">Contacto</span>
+          <h2>¡Siempre contigo en cada ruta!</h2>
+          <p>Solicita tu Garantía Extendida GeoMoto, reporta una falla o escríbenos si eres una empresa. Te asesoramos sin compromiso.</p>
+
+          <h3 class="cta__subtitle">¿Qué pasa después?</h3>
+          <ol class="next">
+            <li><span>1</span><div><strong>Recibimos tu solicitud</strong>Llega directo al equipo de GeoMoto.</div></li>
+            <li><span>2</span><div><strong>Un asesor te contacta</strong>Por llamada o correo, para resolver tus dudas.</div></li>
+            <li><span>3</span><div><strong>Activas tu protección</strong>Tu Honda queda cubierta con su certificado.</div></li>
+          </ol>
+
+          <ul class="cta__list">
+            <li><span>Correo</span><a href="mailto:geomoto.pe@gmail.com">geomoto.pe@gmail.com</a></li>
+            <li><span>Instagram</span><a href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener">@geomoto.pe</a></li>
+            <li><span>Facebook</span><a href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener">/geomoto.pe</a></li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <form class="form" id="form-contacto" novalidate>
+            <div class="form__head">
+              <h3>Solicita información</h3>
+              <p>Te toma menos de un minuto. Los campos marcados con <span class="req" aria-hidden="true">*</span> son obligatorios.</p>
+            </div>
+
+            <fieldset class="choice">
+              <legend>¿Qué necesitas? <span class="req" aria-hidden="true">*</span></legend>
+              <label class="choice__item">
+                <input type="radio" name="motivo" value="cotizar" checked>
+                <span class="choice__card">
+                  <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+                  Cotizar mi garantía
+                </span>
+              </label>
+              <label class="choice__item">
+                <input type="radio" name="motivo" value="falla">
+                <span class="choice__card">
+                  <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+                  Reportar una falla
+                </span>
+              </label>
+              <label class="choice__item">
+                <input type="radio" name="motivo" value="concesionario">
+                <span class="choice__card">
+                  <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+                  Soy empresa
+                </span>
+              </label>
+            </fieldset>
+
+            <p class="form__hint" data-for="falla" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span>Reporta la falla dentro de los <strong>3 días calendario</strong> y ten a la mano tu boleta, fotos del odómetro, DNI y la evidencia de tus mantenimientos.</span>
+            </p>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="f-nombre">Nombre completo <span class="req" aria-hidden="true">*</span></label>
+                <div class="field__control">
+                  <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                  <input id="f-nombre" type="text" name="nombre" required autocomplete="name" placeholder="Ej.: Juan Pérez" aria-describedby="e-nombre">
+                </div>
+                <p class="field__error" id="e-nombre">Escribe tu nombre.</p>
+              </div>
+              <div class="field">
+                <label for="f-ciudad">Ciudad <span class="req" aria-hidden="true">*</span></label>
+                <div class="field__control">
+                  <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg>
+                  <input id="f-ciudad" type="text" name="ciudad" required autocomplete="address-level2" placeholder="Ej.: Tarapoto" aria-describedby="e-ciudad">
+                </div>
+                <p class="field__error" id="e-ciudad">Escribe tu ciudad.</p>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="f-telefono">Celular <span class="req" aria-hidden="true">*</span></label>
+                <div class="field__control field__control--prefix">
+                  <span class="field__prefix">+51</span>
+                  <input id="f-telefono" type="tel" name="telefono" required autocomplete="tel-national" inputmode="numeric" maxlength="11" placeholder="987 654 321" aria-describedby="e-telefono">
+                </div>
+                <p class="field__error" id="e-telefono">Escribe un celular de 9 dígitos que empiece con 9.</p>
+              </div>
+              <div class="field">
+                <label for="f-correo">Correo <span class="opt">Opcional</span></label>
+                <div class="field__control">
+                  <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                  <input id="f-correo" type="email" name="correo" autocomplete="email" placeholder="tu@correo.com" aria-describedby="e-correo">
+                </div>
+                <p class="field__error" id="e-correo">Revisa el correo, parece incompleto.</p>
+              </div>
+            </div>
+
+            <div class="form__group" data-for="cotizar falla">
+              <div class="form__row">
+                <div class="field">
+                  <span class="field__label" id="l-vehiculo">Vehículo Honda <span class="req" aria-hidden="true">*</span></span>
+                  <div class="segmented" role="radiogroup" aria-labelledby="l-vehiculo">
+                    <label><input type="radio" name="vehiculo" value="Moto" checked><span>Moto</span></label>
+                    <label><input type="radio" name="vehiculo" value="Motokar"><span>Motokar</span></label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="f-modelo">Modelo <span class="opt">Opcional</span></label>
+                  <div class="field__control">
+                    <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5L10 9h5l3.5 7.5"/></svg>
+                    <input id="f-modelo" type="text" name="modelo" placeholder="Ej.: XR150L">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__group" data-for="concesionario" hidden>
+              <div class="field">
+                <label for="f-empresa">Empresa o concesionario <span class="req" aria-hidden="true">*</span></label>
+                <div class="field__control">
+                  <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+                  <input id="f-empresa" type="text" name="empresa" autocomplete="organization" placeholder="Nombre comercial" aria-describedby="e-empresa">
+                </div>
+                <p class="field__error" id="e-empresa">Escribe el nombre de tu empresa.</p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-mensaje"><span data-label-mensaje>¿Algo más que debamos saber?</span> <span class="opt" data-opt-mensaje>Opcional</span></label>
+              <textarea id="f-mensaje" name="mensaje" rows="3" maxlength="500" placeholder="Cuéntanos tu consulta" aria-describedby="e-mensaje c-mensaje"></textarea>
+              <div class="field__foot">
+                <p class="field__error" id="e-mensaje">Describe brevemente la falla.</p>
+                <span class="field__count" id="c-mensaje">0/500</span>
+              </div>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="consentimiento" required aria-describedby="e-consent">
+              <span>Acepto que GeoMoto use mis datos para contactarme sobre mi solicitud.</span>
+            </label>
+            <p class="field__error field__error--consent" id="e-consent">Necesitamos tu autorización para contactarte.</p>
+
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button type="submit" class="btn btn--accent btn--block btn--lg">
+              <span class="btn__label">Enviar solicitud</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+
+            <ul class="trust">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Datos protegidos</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Sin compromiso</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/></svg>Todo el Perú</li>
+            </ul>
+          </form>
+
+          <div class="form-done" hidden tabindex="-1">
+            <span class="form-done__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <h3>¡Solicitud enviada!</h3>
+            <p>Gracias, <strong data-done-nombre></strong>. Un asesor de GeoMoto te contactará al <strong data-done-tel></strong>.</p>
+            <button type="button" class="btn btn--primary" data-done-again>Enviar otra solicitud</button>
+          </div>
+        </div>      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo-blanco.png" alt="GeoMoto" width="170" height="57">
+          <p>Tranquilidad y respaldo en cada ruta.</p>
+          <div class="social">
+            <a href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener" aria-label="Instagram de GeoMoto">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="social__dot"/></svg>
+            </a>
+            <a href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener" aria-label="Facebook de GeoMoto">
+              <svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>
+            </a>
+            <a href="mailto:geomoto.pe@gmail.com" aria-label="Correo de GeoMoto">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Acerca de GeoMoto</h4>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#empresas">Soluciones para empresas</a>
+          <a href="#servicios">Servicios para tu moto</a>
+          <a href="#preguntas">Preguntas frecuentes</a>
+        </div>
+        <div>
+          <h4>Garantía extendida</h4>
+          <a href="#planes">Planes</a>
+          <a href="#cobertura">¿Qué cubre?</a>
+          <a href="#exclusiones">¿Qué no cubre?</a>
+          <a href="#como-usar">¿Cómo usarla?</a>
+        </div>
+        <div>
+          <h4>Contáctanos</h4>
+          <a href="mailto:geomoto.pe@gmail.com">geomoto.pe@gmail.com</a>
+          <a href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener">Instagram @geomoto.pe</a>
+          <a href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener">Facebook /geomoto.pe</a>
+        </div>
+      </div>
+      <div class="footer__partners">
+        <span>Disponible en</span>
+        <img src="assets/img/fotos/sorsa-logo.png" alt="Sorsa Motors" width="381" height="223" class="footer__sorsa">
+        <img src="assets/img/fotos/honda-logo.png" alt="Honda" width="400" height="321" class="footer__honda">
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> GeoMoto S.A.C. · Garantía Extendida para motos y motokares Honda.</p>
+        <p>Aplican términos y condiciones. La cobertura se rige por el Certificado Individual de Garantía Extendida para motos Honda.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Asistente de chat: recoge datos y los envía al correo -->
+  <div class="assist">
+    <span class="assist__bubble">¿Te ayudo?</span>
+    <button class="assist__btn" type="button" aria-label="Abrir chat de ayuda" aria-expanded="false" aria-controls="chat">
+      <img src="assets/img/isotipo-blanco.png" alt="" width="26" height="32" class="assist__open">
+      <svg class="assist__close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <section class="chat" id="chat" aria-label="Chat de ayuda GeoMoto" hidden>
+    <header class="chat__head">
+      <span class="chat__avatar"><img src="assets/img/isotipo-blanco.png" alt="" width="20" height="24"></span>
+      <div>
+        <strong>Asistente GeoMoto</strong>
+        <small>Un asesor te contactará</small>
+      </div>
+      <button type="button" class="chat__close" aria-label="Cerrar chat"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="chat__log" aria-live="polite"></div>
+    <div class="chat__options"></div>
+    <form class="chat__input" autocomplete="on">
+      <input type="text" name="respuesta" aria-label="Escribe tu respuesta" placeholder="Escribe aquí…" disabled>
+      <button type="submit" aria-label="Enviar" disabled><svg viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-2-6z"/></svg></button>
+    </form>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
