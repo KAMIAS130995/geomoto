@@ -708,85 +708,84 @@ a { color: var(--turquesa-texto); }
 .stats b { display: block; font-family: var(--font-titulo); font-size: 2rem; font-weight: 800; color: var(--turquesa-texto); line-height: 1.1; }
 .stats span { font-size: .88rem; color: var(--texto-suave); }
 
-/* Concesionarios */
-.partners {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-3);
-  margin-bottom: var(--space-4);
-}
-.partners article {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: var(--radius-md);
-  padding: var(--space-3);
-}
-.partners h3 { color: #fff; }
-.partners p { color: var(--texto-claro); margin: 0; font-size: .97rem; }
-.partners__icon {
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-pill);
-  background: var(--turquesa-ruta);
-  margin-bottom: var(--space-2);
-}
-.partners__icon svg { width: 26px; height: 26px; fill: none; stroke: var(--azul-noche); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-/* Empresas: servicio destacado */
-.biz-featured {
+/* Empresas: la especialidad como texto destacado y sus beneficios en ruta vertical */
+.biz {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: var(--space-4);
-  align-items: center;
-  padding: var(--space-4);
-  margin-bottom: var(--space-3);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--azul-geo), #1E3590);
-  border: 1px solid rgba(0, 175, 193, .4);
+  gap: var(--space-5);
+  align-items: start;
+  padding: var(--space-4) 0 var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, .14);
 }
-.biz-featured h3 { color: #fff; font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 800; }
-.biz-featured__text p { color: var(--texto-claro); font-size: 1.02rem; margin-bottom: var(--space-3); }
-.biz-featured__list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
-.biz-featured__list li {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 16px;
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, .06);
-  color: var(--texto-claro);
-  font-size: .93rem;
-}
-.biz-featured__list strong { display: block; color: #fff; font-family: var(--font-titulo); font-size: .98rem; }
-.biz-featured__list svg { flex: none; width: 26px; height: 26px; fill: none; stroke: var(--turquesa-ruta); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.biz__lead h3 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin: 4px 0 var(--space-2); }
+.biz__lead p { color: var(--texto-claro); font-size: 1.05rem; margin-bottom: var(--space-3); max-width: 480px; }
 
-/* Servicios para tu moto */
-.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
-.service {
-  display: flex;
-  gap: var(--space-2);
-  align-items: flex-start;
-  padding: var(--space-3);
-  border-radius: var(--radius-md);
-  background: var(--fondo);
-  border: 1px solid var(--linea);
-  transition: border-color .15s ease, box-shadow .15s ease;
-}
-.service:hover { border-color: var(--turquesa-ruta); box-shadow: var(--shadow); }
-.service h3 { margin-bottom: 6px; }
-.service p { color: var(--texto-suave); font-size: .95rem; margin-bottom: 12px; }
-.service__icon {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
+/* Ruta vertical reutilizable: línea punteada con un nodo por parada */
+.route-v { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.route-v li { position: relative; padding-left: 46px; }
+.route-v li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  box-sizing: border-box;
   border-radius: var(--radius-pill);
-  background: var(--celeste-bruma);
+  border: 6px solid var(--azul-geo);
+  background: var(--fondo);
 }
-.service__icon svg { width: 26px; height: 26px; fill: none; stroke: var(--azul-geo); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.route-v li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 26px;
+  bottom: calc(var(--space-3) * -1);
+  border-left: 4px dotted var(--turquesa-ruta);
+}
+.route-v h4 { font-size: 1.05rem; margin: 2px 0 4px; }
+.route-v p { margin: 0; font-size: .95rem; color: var(--texto-suave); }
+.route-v--dark li::before { border-color: #fff; background: var(--azul-noche); }
+.route-v--dark h4 { color: #fff; }
+.route-v--dark p { color: var(--texto-claro); }
+
+/* Empresas: el resto de servicios como lista simple */
+.biz-more { padding-top: var(--space-4); border-top: 1px solid rgba(255, 255, 255, .14); }
+.biz-more__title { color: var(--turquesa-ruta); font-size: 13px; letter-spacing: .8px; text-transform: uppercase; margin-bottom: var(--space-3); }
+.biz-more__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+.biz-more__list strong { display: block; color: #fff; font-family: var(--font-titulo); font-size: 1rem; margin-bottom: 6px; }
+.biz-more__list span { color: var(--texto-claro); font-size: .93rem; line-height: 1.5; }
+
+/* Servicios para tu moto: índice numerado con líneas finas */
+.index-list { list-style: none; margin: var(--space-4) 0 0; padding: 0; border-top: 1px solid var(--linea); }
+.index-list li {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--linea);
+}
+.index-list__num { font-family: var(--font-titulo); font-weight: 800; font-size: 1.8rem; color: var(--turquesa-ruta); letter-spacing: -.5px; }
+.index-list__body h3 { margin-bottom: 4px; }
+.index-list__body p { margin: 0; color: var(--texto-suave); max-width: 620px; }
+
+/* Flecha de enlace, compartida por las listas */
+.arrow { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform .15s ease; flex: none; }
+.index-list__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  color: var(--turquesa-texto);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.index-list__link:hover { color: var(--azul-geo); }
+.index-list__link:hover .arrow,
+.help-links a:hover .arrow { transform: translateX(4px); }
 
 /* Centro de ayuda */
 .help { display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-5); align-items: center; }
@@ -794,33 +793,32 @@ a { color: var(--turquesa-texto); }
 .help__media > img:first-child { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .help__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14,26,79,.8), rgba(14,26,79,0) 55%); }
 .help__logo { position: absolute; left: 28px; bottom: 28px; z-index: 1; width: 180px; }
-.actions { list-style: none; margin: var(--space-3) 0; padding: 0; display: grid; gap: 12px; }
-.actions a {
+.help-links { list-style: none; margin: var(--space-3) 0 var(--space-4); padding: 0; border-top: 1px solid var(--linea); }
+.help-links a {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--space-2);
-  padding: 16px 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--linea);
-  background: var(--fondo);
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--linea);
+  color: var(--azul-geo);
   text-decoration: none;
-  color: var(--tinta);
-  font-weight: 600;
-  transition: border-color .15s ease, box-shadow .15s ease;
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: 1.05rem;
 }
-.actions a:hover { border-color: var(--turquesa-ruta); box-shadow: var(--shadow); }
-.actions small { display: block; font-weight: 500; font-size: .85rem; color: var(--texto-suave); }
-.actions .chev { margin-left: auto; color: var(--turquesa-texto); }
-.actions__icon {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-pill);
-  background: var(--celeste-bruma);
+.help-links small {
+  display: block;
+  margin-bottom: 2px;
+  font-family: var(--font-titulo);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: var(--turquesa-texto);
 }
-.actions__icon svg { width: 22px; height: 22px; fill: none; stroke: var(--azul-geo); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.help-links .arrow { color: var(--turquesa-texto); width: 22px; height: 22px; }
+.help-links a:hover { color: var(--turquesa-texto); }
 
 /* Preguntas frecuentes */
 .faq { margin-top: var(--space-4); }
@@ -1412,8 +1410,7 @@ a { color: var(--turquesa-texto); }
 @media (max-width: 1080px) {
   .nav { gap: var(--space-2); }
   .card { flex-basis: calc((100% - var(--space-3)) / 2); }
-  .partners { grid-template-columns: repeat(2, 1fr); }
-  .services { grid-template-columns: 1fr; }
+  .biz-more__list { grid-template-columns: repeat(2, 1fr); }
   .systems { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -1456,7 +1453,7 @@ a { color: var(--turquesa-texto); }
   .hero__track { min-height: 680px; }
   .slide--dark::after, .slide--blue::after { inset: 55% 0 0 0; }
 
-  .welcome__inner, .excl, .about, .help, .cta__inner, .biz-featured { grid-template-columns: 1fr; gap: var(--space-4); }
+  .welcome__inner, .excl, .about, .help, .cta__inner, .biz { grid-template-columns: 1fr; gap: var(--space-4); }
   .cta__text { position: static; }
   .proof { grid-template-columns: 1fr; gap: var(--space-4); }
   .steps { grid-template-columns: repeat(2, 1fr); row-gap: var(--space-4); }
@@ -1495,8 +1492,7 @@ a { color: var(--turquesa-texto); }
   .cards-arrow { display: none; }
   .systems { grid-template-columns: 1fr; }
   .system p { padding-left: 20px; }
-  .steps, .partners { grid-template-columns: 1fr; }
-  .biz-featured { padding: var(--space-3) 20px; border-radius: var(--radius-md); }
+  .steps { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .form { padding: var(--space-3) 20px; }
   .form-card { border-radius: var(--radius-md); }
@@ -1540,16 +1536,12 @@ a { color: var(--turquesa-texto); }
   .step h3 { margin: 10px 0 4px; }
   .step p { margin: 0; }
 
-  /* Tarjetas de empresas compactas */
-  .partners { gap: 12px; }
-  .partners article { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; padding: 18px; }
-  .partners__icon { width: 44px; height: 44px; margin: 0; grid-row: span 2; }
-  .partners__icon svg { width: 22px; height: 22px; }
-  .partners h3 { margin: 2px 0 4px; font-size: 1rem; }
-  .biz-featured__list li { padding: 14px; }
-
-  /* Servicios: un poco más compactos */
-  .service { padding: 18px; }
+  /* Empresas y servicios en celular */
+  .biz { gap: var(--space-4); padding-bottom: var(--space-4); }
+  .biz-more__list { grid-template-columns: 1fr; gap: var(--space-3); }
+  .index-list li { grid-template-columns: 44px 1fr; gap: 4px var(--space-2); align-items: start; }
+  .index-list__num { font-size: 1.4rem; grid-row: span 2; }
+  .index-list__link { grid-column: 2; min-height: 40px; }
 
   /* Áreas de toque de al menos 44 px */
   .card__link { min-height: 44px; }
