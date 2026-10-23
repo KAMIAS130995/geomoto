@@ -15,6 +15,13 @@
 </head>
 <body>
 
+  <!-- Íconos de redes sociales, reutilizados con <use> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.5-4.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M9.1 23.7v-8H6.6V12h2.5v-1.6c0-4.1 1.8-6 5.9-6 .4 0 1 0 1.5.1.4 0 .8.1 1.1.2V8h-1.4c-.7 0-1.3.1-1.7.3-.3.2-.5.4-.7.6-.3.4-.4 1-.4 1.8V12h3.9l-.4 2.1-.3 1.6h-3.2v8.2c5.9-.7 10.5-5.8 10.5-11.9C23.9 5.4 18.6 0 12 0S0 5.4 0 12c0 5.6 3.9 10.4 9.1 11.7z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 3.2V18h16V7.2l-7.4 5a1 1 0 0 1-1.2 0L4 7.2zM5.8 6l6.2 4.2L18.2 6H5.8z"/></symbol>
+  </svg>
+
   <!-- Barra superior -->
   <div class="topbar">
     <div class="container topbar__inner">
@@ -22,7 +29,11 @@
         <a href="#inicio" class="is-active">Personas</a>
         <a href="#empresas">Empresas</a>
       </nav>
-      <span class="topbar__link">Disponible en Sorsa Motors</span>
+      <div class="topbar__right">
+        <span class="topbar__link">Disponible en Sorsa Motors</span>
+        <a class="topbar__social" href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener" aria-label="Instagram de GeoMoto"><svg><use href="#i-instagram"/></svg></a>
+        <a class="topbar__social" href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener" aria-label="Facebook de GeoMoto"><svg><use href="#i-facebook"/></svg></a>
+      </div>
     </div>
   </div>
 
@@ -526,10 +537,10 @@
             <li><span>3</span><div><strong>Activas tu protección</strong>Tu Honda queda cubierta con su certificado.</div></li>
           </ol>
 
-          <ul class="cta__list">
-            <li><span>Correo</span><a href="mailto:geomoto.pe@gmail.com">geomoto.pe@gmail.com</a></li>
-            <li><span>Instagram</span><a href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener">@geomoto.pe</a></li>
-            <li><span>Facebook</span><a href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener">/geomoto.pe</a></li>
+          <ul class="contact-links">
+            <li><a href="mailto:geomoto.pe@gmail.com"><span class="contact-links__icon contact-links__icon--mail"><svg><use href="#i-mail"/></svg></span><span><small>Correo</small>geomoto.pe@gmail.com</span></a></li>
+            <li><a href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener"><span class="contact-links__icon contact-links__icon--ig"><svg><use href="#i-instagram"/></svg></span><span><small>Instagram</small>@geomoto.pe</span></a></li>
+            <li><a href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener"><span class="contact-links__icon contact-links__icon--fb"><svg><use href="#i-facebook"/></svg></span><span><small>Facebook</small>/geomoto.pe</span></a></li>
           </ul>
         </div>
 
@@ -689,15 +700,9 @@
           <img src="assets/img/logo-blanco.png" alt="GeoMoto" width="170" height="57">
           <p>Tranquilidad y respaldo en cada ruta.</p>
           <div class="social">
-            <a href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener" aria-label="Instagram de GeoMoto">
-              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="social__dot"/></svg>
-            </a>
-            <a href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener" aria-label="Facebook de GeoMoto">
-              <svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>
-            </a>
-            <a href="mailto:geomoto.pe@gmail.com" aria-label="Correo de GeoMoto">
-              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            </a>
+            <a class="social__ig" href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener" aria-label="Instagram de GeoMoto"><svg><use href="#i-instagram"/></svg></a>
+            <a class="social__fb" href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener" aria-label="Facebook de GeoMoto"><svg><use href="#i-facebook"/></svg></a>
+            <a class="social__mail" href="mailto:geomoto.pe@gmail.com" aria-label="Correo de GeoMoto"><svg><use href="#i-mail"/></svg></a>
           </div>
         </div>
         <div>
@@ -716,9 +721,9 @@
         </div>
         <div>
           <h4>Contáctanos</h4>
-          <a href="mailto:geomoto.pe@gmail.com">geomoto.pe@gmail.com</a>
-          <a href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener">Instagram @geomoto.pe</a>
-          <a href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener">Facebook /geomoto.pe</a>
+          <a class="footer__icon-link" href="mailto:geomoto.pe@gmail.com"><svg><use href="#i-mail"/></svg>geomoto.pe@gmail.com</a>
+          <a class="footer__icon-link" href="https://www.instagram.com/geomoto.pe/" target="_blank" rel="noopener"><svg><use href="#i-instagram"/></svg>@geomoto.pe</a>
+          <a class="footer__icon-link" href="https://www.facebook.com/geomoto.pe" target="_blank" rel="noopener"><svg><use href="#i-facebook"/></svg>/geomoto.pe</a>
         </div>
       </div>
       <div class="footer__partners">
