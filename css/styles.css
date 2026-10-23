@@ -411,89 +411,70 @@ a { color: var(--turquesa-texto); }
 .welcome__inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-5); align-items: start; margin-bottom: var(--space-5); }
 .welcome__inner p { font-size: 1.08rem; color: var(--texto-suave); }
 .welcome__inner strong { color: var(--azul-geo); }
-/* Beneficios clave: la cifra principal destacada y tres tarjetas de apoyo */
-.perks {
+/* Beneficios clave: la cifra como titular y los demás como paradas de una ruta (línea gráfica del manual) */
+.proof {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) 2.4fr;
+  gap: var(--space-5);
+  align-items: start;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--linea);
+}
+.proof__kicker {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: var(--turquesa-texto);
+}
+.proof__big {
+  margin: 4px 0 6px;
+  font-family: var(--font-titulo);
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--azul-geo);
+  letter-spacing: -.5px;
+}
+.proof__big b { font-size: 4.6rem; letter-spacing: -2px; margin-right: 4px; }
+.proof__or { margin: 0; color: var(--texto-suave); max-width: 260px; }
+.proof__or b { color: var(--azul-geo); font-weight: 700; }
+
+/* Ruta punteada con un nodo por parada, como el isotipo */
+.proof__route {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1.15fr 1fr 1fr 1fr;
-  gap: var(--space-2);
-}
-.perk {
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: var(--space-3);
-  border-radius: var(--radius-md);
-  background: var(--fondo);
-  border: 1px solid var(--linea);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.perk:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
-.perk h3 { font-size: 1.05rem; margin: var(--space-2) 0 0; }
-.perk p { margin: 0; font-size: .93rem; color: var(--texto-suave); line-height: 1.5; }
-
-.perk__icon {
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: var(--celeste-bruma);
-}
-.perk__icon svg {
-  width: 30px;
-  height: 30px;
-  fill: none;
-  stroke: var(--azul-geo);
-  stroke-width: 1.75;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.perk__accent { stroke: var(--turquesa-ruta); stroke-width: 2.25; }
-.perk__dash { stroke-dasharray: 2 3; }
-.perk__node { fill: var(--turquesa-ruta); stroke: none; }
-
-/* Tarjeta destacada: la cifra que más vende */
-.perk--featured {
-  background: var(--azul-geo);
-  border-color: var(--azul-geo);
-  color: #fff;
-  overflow: hidden;
-}
-.perk--featured::after {
+.proof__route::before {
   content: "";
   position: absolute;
-  right: -56px;
-  top: -56px;
-  width: 150px;
-  height: 150px;
+  top: 11px;
+  /* de centro a centro: del primer nodo al último */
+  left: 13px;
+  right: calc((100% - 2 * var(--space-4)) / 3 - 13px);
+  border-top: 4px dotted var(--turquesa-ruta);
+}
+.proof__route li { position: relative; padding-top: 44px; }
+.proof__route li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  box-sizing: border-box;
   border-radius: var(--radius-pill);
-  border: 10px solid rgba(0, 175, 193, .3);
-  pointer-events: none;
+  border: 6px solid var(--azul-geo);
+  background: var(--fondo);
 }
-.perk--featured .perk__icon { background: rgba(255, 255, 255, .1); }
-.perk--featured .perk__icon svg { stroke: #fff; }
-.perk--featured p { color: var(--texto-claro); position: relative; z-index: 1; }
-.perk--featured b { color: #fff; }
-.perk__eyebrow {
-  margin-top: var(--space-2);
-  font-family: var(--font-titulo);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: .8px;
-  text-transform: uppercase;
-  color: var(--turquesa-ruta);
-}
-.perk__big {
-  font-family: var(--font-titulo);
-  font-weight: 800;
-  font-size: clamp(2.2rem, 3.6vw, 2.8rem);
-  line-height: 1;
-  letter-spacing: -.5px;
-}
+.proof__route h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.proof__route p { margin: 0; font-size: .95rem; color: var(--texto-suave); }
 
 /* Pestañas */
 .tabs {
@@ -1477,7 +1458,7 @@ a { color: var(--turquesa-texto); }
 
   .welcome__inner, .excl, .about, .help, .cta__inner, .biz-featured { grid-template-columns: 1fr; gap: var(--space-4); }
   .cta__text { position: static; }
-  .perks { grid-template-columns: repeat(2, 1fr); }
+  .proof { grid-template-columns: 1fr; gap: var(--space-4); }
   .steps { grid-template-columns: repeat(2, 1fr); row-gap: var(--space-4); }
   .steps::before { display: none; }
   .about__badge { right: 16px; }
@@ -1493,10 +1474,19 @@ a { color: var(--turquesa-texto); }
   .slide { align-items: flex-start; }
   .slide h1,
   .slide__title { font-size: clamp(1.7rem, 7.6vw, 2.1rem); }
-  .perks { grid-template-columns: 1fr; }
-  .perk:not(.perk--featured) { display: grid; grid-template-columns: 56px 1fr; column-gap: var(--space-2); row-gap: 2px; align-items: center; }
-  .perk:not(.perk--featured) .perk__icon { grid-row: span 2; }
-  .perk:not(.perk--featured) h3 { margin: 0; }
+  /* La ruta pasa a ser vertical, a la izquierda */
+  .proof__route { grid-template-columns: 1fr; gap: var(--space-3); }
+  .proof__route::before { display: none; }
+  .proof__route li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    bottom: calc(var(--space-3) * -1);
+    left: 11px;
+    border-left: 4px dotted var(--turquesa-ruta);
+  }
+  .proof__route li { padding: 0 0 0 44px; }
+  .proof__big b { font-size: 3.8rem; }
   .section, .cta { padding: var(--space-5) 0; }
   .topbar__link { display: none; }
   .hero__track { min-height: 640px; border-radius: 0 0 var(--radius-md) var(--radius-md); }
