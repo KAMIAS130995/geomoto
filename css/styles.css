@@ -929,17 +929,10 @@ a { color: var(--turquesa-texto); }
   height: 44px;
   border-radius: 12px;
 }
-.contact-links__icon svg { width: 22px; height: 22px; fill: #fff; }
-
-/* Colores oficiales de cada red */
-.contact-links__icon--ig,
-.social__ig { background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%); }
-.contact-links__icon--fb,
-.social__fb { background: #1877F2; }
-.contact-links__icon--mail,
-.social__mail { background: var(--turquesa-ruta); }
-.contact-links__icon--mail svg,
-.social__mail svg { fill: var(--azul-noche); }
+/* Íconos de redes con la línea gráfica de la marca: nodo turquesa-ruta con ícono azul-noche
+   (el manual no permite blanco sobre turquesa) */
+.contact-links__icon { border-radius: var(--radius-pill); background: var(--turquesa-ruta); }
+.contact-links__icon svg { width: 22px; height: 22px; fill: var(--azul-noche); }
 
 /* Tarjeta del formulario */
 .form-card {
@@ -1262,11 +1255,12 @@ a { color: var(--turquesa-texto); }
   width: 44px;
   height: 44px;
   margin: 0;
-  border-radius: 12px;
-  transition: transform .15s ease, box-shadow .15s ease;
+  border-radius: var(--radius-pill);
+  background: var(--turquesa-ruta);
+  transition: transform .15s ease, background-color .15s ease;
 }
-.footer__grid .social a:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0, 0, 0, .3); }
-.social svg { width: 22px; height: 22px; fill: #fff; }
+.footer__grid .social a:hover { transform: translateY(-2px); background: #fff; }
+.social svg { width: 22px; height: 22px; fill: var(--azul-noche); }
 
 /* Íconos junto a los datos de la columna Contáctanos */
 .footer__grid a.footer__icon-link { display: flex; align-items: center; gap: 10px; }
