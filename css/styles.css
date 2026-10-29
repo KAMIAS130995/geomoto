@@ -289,6 +289,19 @@ a { color: var(--turquesa-texto); }
 .slide--hero .slide__inner { grid-template-columns: minmax(0, 520px); min-height: 520px; }
 .slide--hero p { color: #C9D1EA; }
 
+/* Diapositiva con foto a todo el ancho y velo azul-noche para leer el texto (manual: velo de 60–80%) */
+.slide--street { background: var(--azul-noche); }
+.slide--street .slide__inner { grid-template-columns: minmax(0, 470px); }
+.slide--street .slide__title { font-size: clamp(2rem, 3.8vw, 3rem); }
+.slide__photo--full { left: 0; width: 100%; }
+.slide__photo--full img { object-position: 60% 55%; -webkit-mask-image: none; mask-image: none; }
+.slide__photo--full::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(14, 26, 79, .92) 0%, rgba(14, 26, 79, .78) 38%, rgba(14, 26, 79, .15) 72%, rgba(14, 26, 79, 0) 100%);
+}
+
 /* Textura de circuito, lejos del titular */
 .slide--dark::after,
 .slide--blue::after {
@@ -1457,6 +1470,10 @@ a { color: var(--turquesa-texto); }
     -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
     mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
   }
+  /* En celular la foto va en la mitad inferior, a lo ancho, y se funde hacia el texto de arriba */
+  .slide__photo--full { top: auto; bottom: 0; height: 48%; }
+  .slide__photo--full img { object-position: 59% 60%; }
+  .slide__photo--full::after { background: linear-gradient(180deg, rgba(14, 26, 79, 1) 0%, rgba(14, 26, 79, 0) 35%); }
   .slide__art { min-height: 220px; }
   .slide__img { max-height: 220px; }
   .hero__track { min-height: 680px; }
