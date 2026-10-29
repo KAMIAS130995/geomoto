@@ -551,6 +551,7 @@ a { color: var(--turquesa-texto); }
 .card__media--photo img { width: 100%; height: 100%; max-height: none; object-fit: cover; object-position: 50% 30%; filter: none; }
 .card__media--motokar img { object-position: 50% 58%; }
 .card__media--tecnicos img { object-position: 50% 52%; }
+.card__media--atencion img { object-position: 50% 32%; }
 .card__media--icon { background: var(--celeste-bruma); }
 .card__media--icon svg { width: 72px; height: 72px; fill: none; stroke: var(--azul-geo); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .card__body { padding: var(--space-3); display: flex; flex-direction: column; flex: 1; }
