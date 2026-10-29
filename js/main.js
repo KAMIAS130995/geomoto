@@ -346,20 +346,20 @@ const COMUNES = [
 
 const POR_MOTIVO = {
   cotizar: [
-    { key: 'Vehículo', ask: '¿Tu Honda es moto o motokar?', options: ['Moto', 'Motokar'] },
+    { key: 'Vehículo', ask: '¿Tu vehículo es moto o motokar?', options: ['Moto', 'Motokar'] },
     { key: 'Modelo', ask: '¿Qué modelo es? Si no lo sabes, toca «Omitir».', type: 'text', optional: true },
   ],
   falla: [
-    { key: 'Modelo', ask: '¿Qué modelo de Honda tienes?', type: 'text' },
+    { key: 'Modelo', ask: '¿Qué marca y modelo es tu vehículo?', type: 'text' },
     { key: 'Falla', ask: 'Cuéntanos qué falla tiene y desde cuándo.', type: 'text' },
   ],
   transferencia: [
-    { key: 'Modelo', ask: '¿Qué modelo de Honda vendiste o compraste?', type: 'text' },
+    { key: 'Modelo', ask: '¿Qué marca y modelo vendiste o compraste?', type: 'text' },
     { key: 'Fecha de venta', ask: '¿En qué fecha fue la venta?', type: 'text' },
   ],
   servicios: [
     { key: 'Servicio', ask: '¿Qué servicio te interesa?', options: ['Rastreo GPS', 'Accesorios y repuestos', 'Mantenimiento'] },
-    { key: 'Vehículo', ask: '¿Tu Honda es moto o motokar?', options: ['Moto', 'Motokar'] },
+    { key: 'Vehículo', ask: '¿Tu vehículo es moto o motokar?', options: ['Moto', 'Motokar'] },
     { key: 'Consulta', ask: '¿Algo más que debamos saber? Es opcional.', type: 'text', optional: true },
   ],
   concesionario: [
@@ -424,7 +424,7 @@ async function startChat(motivo, servicio) {
   state = { motivo: null, steps: [], i: 0, data: {} };
   setOptions([]);
   setInput(false);
-  await botSay('¡Hola! Soy el asistente de GeoMoto. Te ayudo con la Garantía Extendida para tu moto o motokar Honda.');
+  await botSay('¡Hola! Soy el asistente de GeoMoto. Te ayudo con la Garantía Extendida para tu moto o motokar.');
   if (motivo && MOTIVOS[motivo]) return chooseMotivo(motivo, servicio);
   await botSay('¿En qué te podemos ayudar?');
   setOptions(Object.entries(MOTIVOS).map(([k, label]) => ({ label, onClick: () => chooseMotivo(k) })));
