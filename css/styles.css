@@ -295,6 +295,7 @@ a { color: var(--turquesa-texto); }
 .slide--street .slide__title { font-size: clamp(2rem, 3.8vw, 3rem); }
 .slide__photo--full { left: 0; width: 100%; }
 .slide__photo--full img { object-position: 60% 55%; -webkit-mask-image: none; mask-image: none; }
+.slide--ride .slide__photo--full img { object-position: 50% 40%; }
 .slide__photo--full::after {
   content: "";
   position: absolute;
@@ -1473,6 +1474,7 @@ a { color: var(--turquesa-texto); }
   /* En celular la foto va en la mitad inferior, a lo ancho, y se funde hacia el texto de arriba */
   .slide__photo--full { top: auto; bottom: 0; height: 48%; }
   .slide__photo--full img { object-position: 59% 60%; }
+  .slide--ride .slide__photo--full img { object-position: 74% 35%; }
   .slide__photo--full::after { background: linear-gradient(180deg, rgba(14, 26, 79, 1) 0%, rgba(14, 26, 79, 0) 35%); }
   .slide__art { min-height: 220px; }
   .slide__img { max-height: 220px; }
