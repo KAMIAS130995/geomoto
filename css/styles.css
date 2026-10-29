@@ -546,6 +546,9 @@ a { color: var(--turquesa-texto); }
 .card__media--dark { background: var(--azul-noche); }
 .card__media--blue { background: var(--azul-geo); }
 .card__media--mist { background: var(--celeste-bruma); }
+/* Foto que ocupa toda la parte superior de la tarjeta */
+.card__media--photo { display: block; padding: 0; overflow: hidden; background: var(--azul-noche); }
+.card__media--photo img { width: 100%; height: 100%; max-height: none; object-fit: cover; object-position: 50% 30%; filter: none; }
 .card__media--icon { background: var(--celeste-bruma); }
 .card__media--icon svg { width: 72px; height: 72px; fill: none; stroke: var(--azul-geo); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .card__body { padding: var(--space-3); display: flex; flex-direction: column; flex: 1; }
